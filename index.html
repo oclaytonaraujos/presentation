@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clayton Araújo | Portfólio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+  <style>
+    .animate-fade-in {
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+    .delay-200 { animation-delay: 0.2s; }
+    .delay-300 { animation-delay: 0.3s; }
+    .delay-400 { animation-delay: 0.4s; }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white font-sans transition-colors duration-500">
+  <!-- Toggle Dark Mode -->
+  <div class="absolute top-4 right-4">
+    <button onclick="document.documentElement.classList.toggle('dark')" class="bg-gray-200 dark:bg-gray-800 text-black dark:text-white px-4 py-2 rounded">
+      Alternar Tema
+    </button>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-4 transition-all duration-700">
+    <img src="https://oclaytonaraujos.github.io/presentation/clayton-img.jpg" alt="Clayton Araújo" class="w-40 h-40 rounded-full shadow-lg mb-6 animate-fade-in" />
+    <h1 class="text-5xl font-bold mb-4 animate-fade-in">Olá, eu sou Clayton Araújo</h1>
+    <p class="text-xl mb-6 max-w-xl animate-fade-in delay-200">Desenvolvedor Web-Front-End com Ênfase em HTML, CSS, JavaScript e Angular | Em formação em Engenharia de Software</p>
+    <div class="flex gap-4 mb-6 animate-fade-in delay-300">
+      <a href="https://www.linkedin.com/in/clayton-araujo/" target="_blank" class="hover:scale-110 transition-transform"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="w-6 h-6"></a>
+      <a href="https://github.com/oclaytonaraujos" target="_blank" class="hover:scale-110 transition-transform"><img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub" class="w-6 h-6"></a>
+      <a href="https://www.instagram.com/clayton.araujos/" target="_blank" class="hover:scale-110 transition-transform"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" class="w-6 h-6"></a>
+      <a href="https://wa.me/5564999341815" target="_blank" class="hover:scale-110 transition-transform"><img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp" class="w-6 h-6"></a>
+    </div>
+    <a href="#contato" class="bg-black dark:bg-white text-white dark:text-black px-6 py-3 rounded-full text-lg transition-colors duration-300 hover:scale-105">Fale Comigo</a>
+  </section>
+
+  <!-- Sobre Mim -->
+  <section class="py-20 px-6 bg-gray-50 dark:bg-gray-800 text-center transition-colors duration-700">
+    <h2 class="text-4xl font-semibold mb-6 animate-fade-in">Sobre Mim</h2>
+    <p class="max-w-2xl mx-auto text-lg animate-fade-in delay-300">Sou um desenvolvedor Web-Front-End com foco em HTML, CSS, JavaScript e Angular. Atualmente em formação em Engenharia de Software, estou sempre em busca de aprimorar minhas habilidades e entregar soluções modernas e funcionais.</p>
+  </section>
+
+  <!-- Projetos -->
+  <section class="py-20 px-6">
+    <h2 class="text-4xl font-semibold text-center mb-12 animate-fade-in">Projetos Recentes</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="shadow-lg p-4 rounded-lg border dark:border-gray-700 animate-fade-in">
+        <img src="https://via.placeholder.com/600x400" alt="Projeto 1" class="mb-4 rounded transition-transform hover:scale-105" />
+        <h3 class="text-xl font-semibold mb-2">Projeto 1</h3>
+        <p>Descrição breve do projeto, tecnologias usadas e resultados alcançados.</p>
+      </div>
+      <div class="shadow-lg p-4 rounded-lg border dark:border-gray-700 animate-fade-in delay-200">
+        <img src="https://via.placeholder.com/600x400" alt="Projeto 2" class="mb-4 rounded transition-transform hover:scale-105" />
+        <h3 class="text-xl font-semibold mb-2">Projeto 2</h3>
+        <p>Descrição breve do projeto, tecnologias usadas e resultados alcançados.</p>
+      </div>
+      <div class="shadow-lg p-4 rounded-lg border dark:border-gray-700 animate-fade-in delay-400">
+        <img src="https://via.placeholder.com/600x400" alt="Projeto 3" class="mb-4 rounded transition-transform hover:scale-105" />
+        <h3 class="text-xl font-semibold mb-2">Projeto 3</h3>
+        <p>Descrição breve do projeto, tecnologias usadas e resultados alcançados.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="py-20 px-6 bg-gray-100 dark:bg-gray-700 text-center transition-colors duration-700">
+    <h2 class="text-4xl font-semibold mb-6 animate-fade-in">Entre em Contato</h2>
+    <p class="mb-8 animate-fade-in delay-200">Vamos conversar sobre seu projeto ou ideia!</p>
+    <form action="mailto:seu@email.com" method="POST" enctype="text/plain" class="max-w-xl mx-auto space-y-4 animate-fade-in delay-300">
+      <input type="text" name="nome" placeholder="Seu nome" class="w-full px-4 py-2 rounded border dark:border-gray-600" required />
+      <input type="email" name="email" placeholder="Seu email" class="w-full px-4 py-2 rounded border dark:border-gray-600" required />
+      <textarea name="mensagem" placeholder="Sua mensagem" rows="5" class="w-full px-4 py-2 rounded border dark:border-gray-600" required></textarea>
+      <button type="submit" class="bg-black dark:bg-white text-white dark:text-black px-6 py-3 rounded-full text-lg transition-colors duration-300 hover:scale-105">Enviar</button>
+    </form>
+  </section>
+
+  <footer class="py-6 text-center text-sm text-gray-500 dark:text-gray-400">
+    © 2025 Clayton Araújo. Todos os direitos reservados.
+  </footer>
+</body>
+</html>
